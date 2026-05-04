@@ -103,80 +103,80 @@ print(" ")
 
 #Questoes da atividade
 query_cliente = cursor.execute("""SELECT * FROM cliente;""")
-print("Todos os clientes: ", query_cliente.fetchall())
+print("1) Todos os clientes: ", query_cliente.fetchall())
 print(" ")
 
 query_produto = cursor.execute("""SELECT * FROM produto;""")
-print("Todos os produtos: ", query_produto.fetchall())
+print("2) Todos os produtos: ", query_produto.fetchall())
 print(" ")
 
 query_produto1 = cursor.execute("""SELECT nome, preco FROM produto;""")
-print("Apenas nome e preço dos produtos: ", query_produto1.fetchall())
+print("3) Apenas nome e preço dos produtos: ", query_produto1.fetchall())
 print(" ")
 
 query_produtogreat = cursor.execute("""SELECT nome, preco FROM produto WHERE preco > 100 ORDER BY nome ASC;""")
-print("Produtos com preço acima de 100: ", query_produtogreat.fetchall())
+print("4) Produtos com preço acima de 100: ", query_produtogreat.fetchall())
 print(" ")
 
 query_produtoless = cursor.execute("""SELECT nome, preco FROM produto WHERE preco < 500 ORDER BY nome ASC;""")
-print("Produtos com preço abaixo de 500: ", query_produtoless.fetchall())
+print("5) Produtos com preço abaixo de 500: ", query_produtoless.fetchall())
 print(" ")
 
 query_clientecidade = cursor.execute("""SELECT * FROM cliente WHERE cidade = 'Belém';""")
-print("Clientes de cidade especifica (Belém): ", query_clientecidade.fetchall())
+print("6.1) Clientes de cidade especifica (Belém): ", query_clientecidade.fetchall())
 print(" ")
 
 query_cliente_cidade1 = cursor.execute("""SELECT * FROM cliente WHERE cidade = 'Oiapoque';""")
-print("Clientes de cidade especifica (Oiapoque): ", query_cliente_cidade1.fetchall())
+print("6.2) Clientes de cidade especifica (Oiapoque): ", query_cliente_cidade1.fetchall())
 print(" ")
 
 query_cliente_cidade2 = cursor.execute("""SELECT * FROM cliente WHERE cidade = 'Santana';""")
-print("Clientes de cidade especifica (Santana): ", query_cliente_cidade2.fetchall())
+print("6.3) Clientes de cidade especifica (Santana): ", query_cliente_cidade2.fetchall())
 print(" ")
 
 query_cliente_cidade3 = cursor.execute("""SELECT * FROM cliente WHERE cidade = 'Macapá';""")
-print("Clientes de cidade especifica (Macapá): ", query_cliente_cidade3.fetchall())
+print("6.4) Clientes de cidade especifica (Macapá): ", query_cliente_cidade3.fetchall())
 print(" ")
 
 query_produtos_estoque= cursor.execute("""SELECT * FROM produto WHERE estoque > 10;""")
-print("Produtos com estoque maior que 10: ", query_produtos_estoque.fetchall())
+print("7) Produtos com estoque maior que 10: ", query_produtos_estoque.fetchall())
 print(" ")
 
 query_produtos_estoquepreco = cursor.execute("""SELECT * FROM produto WHERE estoque > 5 AND preco > 100;""")
-print("Produtos com estoque maior que 5 e preço maior que 100: ", query_produtos_estoquepreco.fetchall())
+print("8) Produtos com estoque maior que 5 e preço maior que 100: ", query_produtos_estoquepreco.fetchall())
 print(" ")
 
 query_produtos_estoquepreco1 = cursor.execute("""SELECT * FROM produto WHERE estoque > 20 AND preco < 50;""")
-print("Produtos com estoque maior que 20 e preço menor que 50: ", query_produtos_estoquepreco1.fetchall())
+print("9) Produtos com estoque maior que 20 e preço menor que 50: ", query_produtos_estoquepreco1.fetchall())
 print(" ")
 
 query_clientea = cursor.execute("""SELECT * FROM cliente WHERE nome LIKE 'A%';""")
-print("Clientes com A: ", query_clientea.fetchall())
+print("10) Clientes com A: ", query_clientea.fetchall())
 print(" ")
 
 query_produto_note = cursor.execute("""SELECT * FROM produto WHERE nome LIKE 'note%';""")
-print("Produtos com note: ", query_produto_note.fetchall())
+print("11) Produtos com note: ", query_produto_note.fetchall())
 print(" ")
 
 query_produto_between = cursor.execute("""SELECT * FROM produto WHERE preco > 100 AND preco < 500;""")
-print("Produtos com preço entre 100 e 500: ", query_produto_between.fetchall())
+print("12) Produtos com preço entre 100 e 500: ", query_produto_between.fetchall())
 print(" ")
 
 query_produto_orderasc = cursor.execute("""SELECT nome, preco FROM produto ORDER BY preco ASC;""")
-print("Produtos Ordernado pelo preço crescente: ", query_produto_orderasc.fetchall())
+print("13) Produtos Ordernado pelo preço crescente: ", query_produto_orderasc.fetchall())
 print(" ")
 
 query_produto_orderdesc = cursor.execute("""SELECT nome, preco FROM produto ORDER BY preco DESC;""")
-print("Produtos Ordernado pelo preço crescente: ", query_produto_orderdesc.fetchall())
+print("14) Produtos Ordernado pelo preço crescente: ", query_produto_orderdesc.fetchall())
 print(" ")
 
 query_cliente_order = cursor.execute("""SELECT * FROM cliente ORDER BY nome ASC;""")
-print("Produtos com preço acima de 100: ", query_cliente_order.fetchall())
+print("15) Produtos com preço acima de 100: ", query_cliente_order.fetchall())
 print(" ")
 
 
 query_produto_orderpreconome = cursor.execute("""SELECT nome, preco FROM produto ORDER BY preco DESC, nome ASC;""")
-print("Produtos Ordernado pelo preço crescente: ", query_produto_orderpreconome.fetchall())
+print("16) Produtos Ordernado pelo preço crescente: ", query_produto_orderpreconome.fetchall())
 print(" ")
 
 conn.close()
