@@ -167,17 +167,16 @@ print("13) Produtos Ordernado pelo preço crescente: ", query_produto_orderasc.f
 print(" ")
 
 query_produto_orderdesc = cursor.execute("""SELECT nome, preco FROM produto ORDER BY preco DESC;""")
-print("14) Produtos Ordernado pelo preço crescente: ", query_produto_orderdesc.fetchall())
+print("14) Produtos Ordernado pelo preço decrescente: ", query_produto_orderdesc.fetchall())
 print(" ")
 
 query_cliente_order = cursor.execute("""SELECT * FROM cliente ORDER BY nome ASC;""")
-print("15) Produtos com preço acima de 100: ", query_cliente_order.fetchall())
+print("15) Cliente ordernado pelo nome: ", query_cliente_order.fetchall())
 print(" ")
 
 
 query_produto_orderpreconome = cursor.execute("""SELECT nome, preco FROM produto ORDER BY preco DESC, nome ASC;""")
-print("16) Produtos Ordernado pelo preço crescente: ", query_produto_orderpreconome.fetchall())
+print("16) Produtos Ordernado pelo preço decrescente e nome crescente: ", query_produto_orderpreconome.fetchall())
 print(" ")
 
 conn.close()
-
